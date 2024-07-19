@@ -1,0 +1,2 @@
+eff = 0.7
+P {Pa} = 0.3 {W/CFM} * eff

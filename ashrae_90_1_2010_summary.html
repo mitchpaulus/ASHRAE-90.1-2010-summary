@@ -40,14 +40,37 @@
         <h2> Sizing </h2>
 
         <p> Cooling over sizing: 15% or 1.15. Heating over sizing: 25% or 1.25. </p>
-
-
+        <p> Unmet hour max: 300 hours. </p>
     </div>
+
+    <!-- Column 2 -->
     <div>
         <img src="./table_g3.13.15_method_2.png" alt="Table G3.13.15 Method 2" style="width: 100%; height: auto;">
     </div>
-    <div>
 
+    <!-- Column 3 -->
+    <div>
+        <h2> System Fan Power </h2>
+        <table>
+            <caption> G3.1.2.10 System Fan Power</caption>
+            <tr> <th> System Type </th> <th> Power </th> </tr>
+            <tr> <td> 1, 2 </td> <td> P_fan = CFMs * 0.3 W/CFM </td> </tr>
+            <tr> <td> 3 - 8</td> <td> P_fan = bhp * 746 / Fan Motor Efficiency </td> </tr>
+            <tr> <td>9, 10 (supply fan)</td> <td>P_fan = CFMs * 0.3</td> </tr>
+            <tr> <td>9, 10 (non mechanical cooling)</td> <td>P_fan = CFM_nmc * 0.054</td> </tr>
+        </table>
+
+        <table>
+            <caption> Fan Power Nomenclature </caption>
+            <tr> <th> Variable </th> <th> Description </th> </tr>
+            <tr> <td> P_fan </td> <td>Electric power to fan motor (W)</td>  </tr>
+            <tr> <td> bhp </td> <td> brake horsepower of baseline fan motor from Table G3.1.2.9 </td> </tr>
+            <tr> <td> Fan Motor Efficiency </td> <td> Efficiency from Table 10.8B for the next motor size greater tha nthe bhp using a totally enclosed fan cooled motor at 1800 RPM.</td>  </tr>
+            <tr> <td> CFMs </td> <td>The baseline system maximum design supply fan airflow rate in CFM</td> </tr>
+            <tr> <td> CFM_nmc </td> <td> The baseline non-mechanical cooling fan airflow rate in CFM</td> </tr>
+        </table>
+
+        <p> 0.3 W/CFM is also equivalent to efficiency of 0.7 and 445 Pa. Can also use equation 0.3 W/CFM = eff * Pressure Rise (Pa) * 2118.88 Pa/(W/CFM) </p>
     </div>
 </body>
 </html>
