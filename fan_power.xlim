@@ -1,2 +1,10 @@
 eff = 0.7
 P {Pa} = 0.3 {W/CFM} * eff
+
+Pw = 0 {inH2O} to 4 {inH2O} by 0.1 {inH2O}
+Pw_Pa {Pa} = Pw
+
+eff2 {%} = Pw / 0.3 {W/CFM}
+
+P_100 {inH2O} = 0.3 {W/CFM} * 100 {%}
+P_100_Pa {Pa} = P_100

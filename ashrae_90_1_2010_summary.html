@@ -5,6 +5,7 @@
 
     <style>
         body { font-family: sans-serif; }
+        table, th, td { border: 1px solid black; border-collapse: collapse; }
     </style>
 
 
@@ -67,12 +68,13 @@
             <tr> <th> Variable </th> <th> Description </th> </tr>
             <tr> <td> P_fan </td> <td>Electric power to fan motor (W)</td>  </tr>
             <tr> <td> bhp </td> <td> brake horsepower of baseline fan motor from Table G3.1.2.9 </td> </tr>
-            <tr> <td> Fan Motor Efficiency </td> <td> Efficiency from Table 10.8B for the next motor size greater tha nthe bhp using a totally enclosed fan cooled motor at 1800 RPM.</td>  </tr>
+            <tr> <td> Fan Motor Efficiency </td> <td> Efficiency from Table 10.8B for the next motor size greater than the bhp using a totally enclosed fan cooled motor at 1800 RPM.</td>  </tr>
             <tr> <td> CFMs </td> <td>The baseline system maximum design supply fan airflow rate in CFM</td> </tr>
             <tr> <td> CFM_nmc </td> <td> The baseline non-mechanical cooling fan airflow rate in CFM</td> </tr>
         </table>
 
-        <p> 0.3 W/CFM is also equivalent to efficiency of 0.7 and 445 Pa. Can also use equation 0.3 W/CFM = eff * Pressure Rise (Pa) * 2118.88 Pa/(W/CFM) </p>
+        <p> 0.3 W/CFM is also equivalent to efficiency of 0.7 and 445 Pa (1.7865 in. H2O). Can also use equation 0.3 W/CFM = eff * Pressure Rise (Pa) * 2118.88 Pa/(W/CFM) </p>
+        <p>This also implies that the maximum pressure that could be utilized would be 2.552 in. H2O (635.7 Pa), otherwise the efficiency would be greater than 100%.</p>
     </div>
 </body>
 </html>
