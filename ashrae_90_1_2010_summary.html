@@ -45,6 +45,30 @@
         <p> Unmet hour max for both cooling and heating (sum between them): 300 hours. </p>
         <p><strong>Definition of unmet load hour:</strong> An hour in which one or more zones is outside of the thermostat setpoint plus
         or minus one half of the temperature control throttling range. Any hour with one or more zones with an unmet cooling load or unmet heating load is defined as an unmet load hour.</p>
+
+
+        <h2>CHW Pumps</h2>
+        <p>
+        22 W/gpm (348,707.11 W/(m^3/s)). 16 W/gpm (253605.17 W/(m^3/s)) for purchased CHW.
+        &gt; 300 tons = primary/variable with secondary VFDs. &lt; 300 tons = primary/secondary with secondary pump riding the pump curve.
+        </p>
+
+        <h2>HHW Pumps</h2>
+        <p>
+        19 W/gpm (301156.14 W/(m^3/s)). 14 W/gpm (221904.52 W/(m^3/s)) for purchased HHW.
+        &gt; 120,000 ft² = primary/variable with secondary VFDs. &lt; 120,000 ft² = primary/secondary with secondary pump riding the pump curve.
+        </p>
+
+        <h2>All Pumps</h2>
+
+        <p> <a href="https://unmethours.com/question/50936/how-to-model-the-pumps-according-to-ashrae-9012010/">How to model in EnergyPlus</a> </p>
+        <pre>
+coeff_a = if exists('hvac') then 0.0 else 0.0
+coeff_b = if exists('hvac') then 0.5726 else 3.2485
+coeff_c = if exists('hvac') then -0.301 else -4.7443
+coeff_d = if exists('hvac') then 0.7347 else 2.5294
+        </pre>
+
     </div>
 
     <!-- Column 2 -->
@@ -74,7 +98,7 @@
             <tr> <td> CFM_nmc </td> <td> The baseline non-mechanical cooling fan airflow rate in CFM</td> </tr>
         </table>
 
-        <p> 0.3 W/CFM is also equivalent to efficiency of 0.7 and 445 Pa (1.7865 in. H2O). Can also use equation 0.3 W/CFM = eff * Pressure Rise (Pa) * 2118.88 Pa/(W/CFM) </p>
+        <p>0.3 W/CFM is also equivalent to efficiency of 0.7 and 445 Pa (1.7865 in. H2O). Can also use equation 0.3 W/CFM = eff * Pressure Rise (Pa) * 2118.88 Pa/(W/CFM)</p>
         <p>This also implies that the maximum pressure that could be utilized would be 2.552 in. H2O (635.7 Pa), otherwise the efficiency would be greater than 100%.</p>
     </div>
 </body>
