@@ -46,6 +46,10 @@
         <p><strong>Definition of unmet load hour:</strong> An hour in which one or more zones is outside of the thermostat setpoint plus
         or minus one half of the temperature control throttling range. Any hour with one or more zones with an unmet cooling load or unmet heating load is defined as an unmet load hour.</p>
 
+        <p>
+        Hourly historical weather files with typical peaks, or 99.6% heating design temperatures, 1% cooling dry-bulb, 1% cooling wet-bulb.
+        </p>
+
 
         <h2>CHW Pumps</h2>
         <p>
@@ -111,7 +115,7 @@ coeff_d = if exists('hvac') then 0.7347 else 2.5294
             <tr> <td> CFM_nmc </td> <td> The baseline non-mechanical cooling fan airflow rate in CFM</td> </tr>
         </table>
 
-        <p>0.3 W/CFM is also equivalent to efficiency of 0.7 and 445 Pa (1.7865 in. H2O). Can also use equation 0.3 W/CFM = eff * Pressure Rise (Pa) * 2118.88 Pa/(W/CFM)</p>
+        <p>0.3 W/CFM is also equivalent to efficiency of 0.7 and 445 Pa (1.7865 in. H2O). Also 635.66 W/(m³/s). Can also use equation 0.3 W/CFM = eff * Pressure Rise (Pa) * 2118.88 Pa/(W/CFM)</p>
         <p>This also implies that the maximum pressure that could be utilized would be 2.552 in. H2O (635.7 Pa), otherwise the efficiency would be greater than 100%.</p>
     </div>
 </body>

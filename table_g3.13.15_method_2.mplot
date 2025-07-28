@@ -1,4 +1,4 @@
-f "table_g3.13.15_method_2.tsv"
+f "./table_g3.13.15_method_2.tsv"
 title" Table G3.13.15 Method 2"
 x 1 y 2
 xlabel "PLR"
